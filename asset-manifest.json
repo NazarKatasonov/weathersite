@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/weathersite/static/css/main.72ec0d6a.css",
+    "main.js": "/weathersite/static/js/main.2816a309.js",
+    "static/media/hero.svg": "/weathersite/static/media/hero.717165bee6402cc667536860095963b5.svg",
+    "static/media/katsapp.svg": "/weathersite/static/media/katsapp.65dd5480fea7f6f399c2ae110845582c.svg",
+    "static/media/instagram.svg": "/weathersite/static/media/instagram.32e2cc81b7464e0125a07c2562d3eabf.svg",
+    "static/media/avatar.svg": "/weathersite/static/media/avatar.9ae21baa5699bca7190dfd46ad59ebe8.svg",
+    "static/media/facebook.svg": "/weathersite/static/media/facebook.4cc87fe3158bdfa7086cdc410dc67e75.svg",
+    "static/media/logo.svg": "/weathersite/static/media/logo.31214a6ca57e3d4a329b185cdd9c102f.svg",
+    "index.html": "/weathersite/index.html",
+    "main.72ec0d6a.css.map": "/weathersite/static/css/main.72ec0d6a.css.map",
+    "main.2816a309.js.map": "/weathersite/static/js/main.2816a309.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72ec0d6a.css",
+    "static/js/main.2816a309.js"
+  ]
+}
