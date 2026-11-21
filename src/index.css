@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&family=Montserrat:wght@400;500&display=swap');
+
+:root {
+  --accent: #ffb26b;
+  --card: #e8e8e8;
+  --input: #e4e4e4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* обще*/
+.btn {
+  padding: 5px 15px;
+  background: var(--accent);
+  border: 0;
+  border-radius: 10px;
+  font:
+    500 10px "Montserrat",
+    sans-serif;
+  cursor: pointer;
+}
+
+.error {
+  margin: 20px 0 0;
+  text-align: center;
+  color: #d33;
+}
+
+/* хедер*/
+.header {
+  position: relative;
+}
+
+.header_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1135px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.header_burger {
+  background: none;
+  border: 0;
+  font:
+    400 15px "Montserrat",
+    sans-serif;
+  cursor: pointer;
+}
+
+.header_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.header_menu_open {
+  display: flex;
+}
+
+.header_links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header_links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header_user {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 10px;
+}
+
+.header_avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/*хіро */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 345px;
+  padding: 40px 30px 0;
+  color: #fff;
+  background: url("./assets/hero.svg") center;
+}
+
+.hero_title {
+  margin: 0 0 40px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.hero_row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 60px;
+  padding-left: 15px;
+  border-left: 2px solid #fff;
+}
+
+.hero_text,
+.hero_date {
+  margin: 0;
+  font-size: 15px;
+}
+
+.hero_search {
+  display: flex;
+  width: 175px;
+}
+
+.hero_search input {
+  flex: 1;
+  min-width: 0;
+  height: 25px;
+  padding: 0 10px;
+  background: #d9d9d9;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  font:
+    400 10px "Montserrat",
+    sans-serif;
+}
+
+.hero_search button {
+  width: 30px;
+  background: var(--accent);
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/*картки міст*/
+.cities {
+  display: grid;
+  grid-template-columns: 295px;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 390px;
+  padding: 20px;
+  background: var(--card);
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+.card_top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card_time {
+  margin: 10px 0;
+  font-size: 25px;
+}
+
+.card_tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card_date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.card_line {
+  width: 1px;
+  height: 15px;
+  background: #000;
+}
+
+.card_temp {
+  margin: 10px 0 auto;
+  font-size: 30px;
+}
+
+.card_actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card_icon {
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*пітомци*/
+.news {
+  width: 295px;
+  margin: 0 auto 60px;
+}
+
+.news_title {
+  margin: 0 0 25px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.news_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.news_img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.news_text {
+  margin: 10px 0 0;
+  font-size: 15px;
+}
+
+.news_more {
+  margin-top: 25px;
+  padding: 10px 30px;
+  font-size: 15px;
+}
+
+/*природа*/
+.gallery {
+  width: 295px;
+  margin: 0 auto 60px;
+}
+
+.gallery_title {
+  margin: 0 0 25px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.gallery_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.gallery_item {
+  width: 35px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.gallery_item_active {
+  width: 130px;
+  height: 100px;
+}
+
+/*утер*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 30px;
+  background: var(--accent);
+}
+
+.footer_title {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer_text {
+  margin: 0;
+  font-size: 10px;
+}
+
+.footer_social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer_icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+/* модалка*/
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal_box {
+  width: 295px;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.modal_title {
+  margin: 0 0 20px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.modal_field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.modal_input {
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  background: var(--input);
+  border: 0;
+  border-radius: 15px;
+  font:
+    400 15px "Montserrat",
+    sans-serif;
+}
+
+.modal_error {
+  color: #d33;
+  font-size: 10px;
+}
+
+.modal_submit {
+  margin-top: 10px;
+  padding: 10px 35px;
+  background: var(--accent);
+  border: 0;
+  border-radius: 10px;
+  font:
+    400 15px "Montserrat",
+    sans-serif;
+  cursor: pointer;
+}
+
+.modal_login {
+  margin: 15px 0 0;
+  font-size: 10px;
+}
+
+.modal_login a {
+  color: #000;
+}
+
+/* планшет */
+@media (min-width: 768px) {
+  .header_inner {
+    height: 70px;
+  }
+
+  .header_burger {
+    display: none;
+  }
+
+  .header_menu {
+    display: flex;
+    position: static;
+    flex: 1;
+    align-items: center;
+    margin-left: 50px;
+    padding: 0;
+    background: none;
+  }
+
+  .header_links {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .header_user {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .hero_title {
+    font-size: 30px;
+  }
+
+  .hero_row {
+    flex-direction: row;
+    gap: 0;
+    margin-bottom: 70px;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .hero_text,
+  .hero_date {
+    width: 180px;
+  }
+
+  .hero_text {
+    padding-right: 15px;
+    text-align: right;
+    border-right: 2px solid #fff;
+  }
+
+  .hero_date {
+    padding-left: 15px;
+  }
+
+  .hero_search {
+    width: 390px;
+  }
+
+  .hero_search input {
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .hero_search button {
+    width: 35px;
+  }
+
+  .cities {
+    grid-template-columns: repeat(2, 260px);
+    gap: 40px 110px;
+  }
+
+  .details {
+    grid-template-columns: repeat(3, 1fr);
+    width: 635px;
+    padding: 25px;
+  }
+
+  .news,
+  .gallery {
+    width: 635px;
+  }
+
+  .news_list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 15px;
+  }
+
+  .gallery_item {
+    width: 70px;
+    height: 90px;
+  }
+
+  .gallery_item_active {
+    width: 250px;
+    height: 160px;
+  }
+
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 40px 100px;
+  }
+
+  .modal_box {
+    width: 400px;
+    padding: 30px 45px;
+  }
+}
+
+/* десктоп*/
+@media (min-width: 1200px) {
+  .header_inner {
+    height: 85px;
+    padding: 0;
+  }
+
+  .hero {
+    height: 590px;
+    padding-top: 60px;
+  }
+
+  .hero_title {
+    margin-bottom: 80px;
+    font-size: 40px;
+  }
+
+  .hero_row {
+    margin-bottom: 150px;
+  }
+
+  .hero_text,
+  .hero_date {
+    width: 300px;
+    font-size: 25px;
+  }
+
+  .hero_search {
+    width: 625px;
+  }
+
+  .hero_search input {
+    height: 40px;
+  }
+
+  .hero_search button {
+    width: 40px;
+  }
+
+  .cities {
+    grid-template-columns: repeat(3, 320px);
+    gap: 40px 90px;
+  }
+
+  .details {
+    width: 1135px;
+    gap: 25px;
+    padding: 35px;
+  }
+
+  .news,
+  .gallery {
+    width: 1135px;
+  }
+
+  .news_title,
+  .gallery_title {
+    font-size: 20px;
+  }
+
+  .news_list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 20px;
+  }
+
+  .news_img {
+    height: 210px;
+  }
+
+  .gallery_item {
+    width: 125px;
+    height: 140px;
+  }
+
+  .gallery_item_active {
+    width: 380px;
+    height: 210px;
+  }
+
+  .footer {
+    gap: 80px;
+    padding: 40px 150px;
+  }
+
+  .modal_box {
+    width: 600px;
+    padding: 40px 80px;
+  }
+
+  .modal_title {
+    font-size: 40px;
+  }
+}
+/* Montserrat Alternates */
+.header_burger,
+.header_links a,
+.footer_title,
+.footer_text {
+  font-family: "Montserrat Alternates", sans-serif;
+}
